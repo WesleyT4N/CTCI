@@ -1,0 +1,28 @@
+1.
+- Partition array into 3 equal portions
+    - Have a pointer to the top of each "stack"
+        - say we have stack os size n
+        - p1 = 0, p2 = n/3, p3 = 2*n / 3
+    - push value
+        - check if p_x isnt greater than n / 3 - 1
+            - if is, throw stack overflow exception
+        - set a[p_x] = value
+        - increment that respective stack's pointer by one
+    - pop 
+        - check if p_x hasn't gone below lower bound
+            - if it has, throw no empty stack exception
+        - null a[p_x]
+        - decrement pointer
+    - peek
+        - if p_x at lower bound return empty stack exception
+        - return a[p_x]
+
+2.
+- Initialize array of size n that is initially not allocated at all
+    - have 3 pointers all pointing to 0
+    - push value to stack x
+        - 
+        - check if p_x isn't > n - 1
+        - set a[p_x] = value
+        - check other pointers = p_x if so increment up 
+        - increment p_x
