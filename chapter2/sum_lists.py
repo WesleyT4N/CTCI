@@ -9,15 +9,17 @@ def sum_lists(l1. l2):
         if l2:
             sum += l2.data
         if sum // 10 !== 0:
-            carry = sum % 9
+            carry = 1
         else:
             carry = 0
         if h:
             curr.next = sum % 10
         else:
-            h = Node(sum)
+            h = Node(sum % 10)
             curr = h
         curr = curr.next
+        l1 = l1.next
+        l2 = l2.next
 
 def sum_lists_rec(l1, l2, carry):
     if l1 is None and l2 is None and carry == 0:

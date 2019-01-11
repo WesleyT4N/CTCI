@@ -36,3 +36,9 @@ def linked_list_add_rec(h,data):
     else:
         return Node(data)
 
+def linked_list_remove_rec(h, data):
+    if h.data == data:
+        h = h.next
+        
+    else:
+

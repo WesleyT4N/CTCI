@@ -9,6 +9,23 @@ class LinkedList:
 
 def partition(head, x):
     curr = head
+    h = curr
+    t = curr
+    while curr:
+        next = curr.next
+        if curr.data < x:
+            curr.next = h
+            h = curr
+        else:
+            t.next = curr
+            t = curr
+        curr = next
+    t.next = None
+    return h
+
+
+def partition(head, x):
+    curr = head
     left = None
     l_head = None
     right = None
